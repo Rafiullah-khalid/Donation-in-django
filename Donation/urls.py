@@ -4,13 +4,16 @@ from django.urls import path, include
 from backend.urls import *
 from user.urls import *
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('product/', include("backend.urls")),
-    path('category/', include("backend.urls")),
-    path('Donar/', include("user.urls")),
-    path('Reciver/', include("user.urls")),
-    path('Employee/', include("user.urls")),
+    path('api/', include("backend.urls")),
+    path('api/', include("backend.urls")),
+    path('api/', include("user.urls")),
+    path('api/', include("user.urls")),
+    path('api/', include("user.urls")),
+    path('ap/', include("backend.urls")),
+
     # Report=?
     
 
