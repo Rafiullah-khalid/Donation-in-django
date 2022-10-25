@@ -9,19 +9,19 @@ from rest_framework import generics
 class ProductViewSet(ListCreateAPIView):
     queryset=Product.objects.all()
     serializer_class=ProductSerializer
-
-
-class CategoryViewSet(ListCreateAPIView):
-    queryset=Category.objects.all()
-    serializer_class=CategorySerializer
-
 class ProductUpdate(generics.RetrieveUpdateDestroyAPIView):
     queryset=Product
     serializer_class=ProductSerializer
 
 
 
+class CategoryViewSet(ListCreateAPIView):
+    queryset=Category.objects.all()
+    serializer_class=CategorySerializer
 
+class CategoryDetial(generics.RetrieveUpdateDestroyAPIView):
+    queryset=Category
+    serializer_class=CategorySerializer
 
 
 
